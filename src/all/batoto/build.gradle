@@ -1,0 +1,19 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlinx-serialization'
+}
+
+ext {
+    extName = 'Bato.to'
+    pkgNameSuffix = 'all.batoto'
+    extClass = '.BatoToFactory'
+    extVersionCode = 32
+    isNsfw = true
+}
+
+apply from: "$rootDir/common.gradle"
+
+dependencies {
+    implementation(project(':lib-cryptoaes'))
+}
